@@ -1,4 +1,4 @@
-count = 0
+
 def print_name(name, count):
     if count == 5:
         return 
