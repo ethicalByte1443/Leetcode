@@ -11,13 +11,30 @@
             this.val = val;
             this.next = null;
         }
+
+        public static void print(Node head){
+            while(head != null){
+                System.out.print(head.val + " -> ");
+                head = head.next;
+            }
+            System.out.println("null");
+        }
  
 
     }
 
 
     public class LL{
+
+        public static void print(Node head){
+            while(head != null){
+                System.out.print(head.val + " -> ");
+                head = head.next;
+            }
+            System.out.println("null");
+        }
         public static void main(String[] args) {
+            
             int arr[] = {1,2,3,4,5,6,7,8};
             Node head = new Node(arr[0]);
             Node ans = head;
@@ -27,10 +44,6 @@
                 ans = ans.next;
             }
 
-            while(head != null){
-                System.out.print(head.val + " -> ");
-                head = head.next;
-            }
-            System.out.println("null");
+            print(head);
         }
     }
