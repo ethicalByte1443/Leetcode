@@ -11,9 +11,10 @@
             this.val = val;
             this.next = null;
         }
-
+ 
 
     }
+
 
     public class LL{
         public static void main(String[] args) {
@@ -22,13 +23,13 @@
             Node ans = head;
             for (int i = 1; i < arr.length; i++) {
                 Node current = new Node(arr[i]);
-                head.next = current;
-                head = head.next;
+                ans.next = current;
+                ans = ans.next;
             }
 
-            while(ans != null){
-                System.out.print(ans.val + " -> ");
-                ans = ans.next;
+            while(head != null){
+                System.out.print(head.val + " -> ");
+                head = head.next;
             }
             System.out.println("null");
         }
