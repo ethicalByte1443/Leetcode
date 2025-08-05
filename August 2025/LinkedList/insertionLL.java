@@ -1,9 +1,21 @@
 public class insertionLL {
 
     public static Node insertHead(Node head, int k) {
-        Node newNode = new Node(k, null);
+        Node newNode = new Node(k);
         newNode.next = head;
         head = newNode;
+        return head;
+    }
+
+    public static Node insertTail(Node head, int val){
+        Node current = head;
+        while(current.next != null){
+            current = current.next;
+        }
+
+        Node newNode = new Node(val);
+        current.next = newNode;
+
         return head;
     }
 
@@ -18,14 +30,8 @@ public class insertionLL {
         }
 
         head = insertHead(head, 0);
-
+        head = insertTail(head, 9);
         LL.print(head);
 
-        Node current = head;
-        while (current.next.next != null) {
-            current = current.next;
-        }
-
-        System.out.println(current.val);
     }
 }

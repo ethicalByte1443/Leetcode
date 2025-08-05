@@ -10,8 +10,13 @@ class Node{
     }
 }
 public class DLL {
-    public static void printBack(Node tail){
-        Node current = tail;
+    public static void printBack(Node head){
+        Node current = head;
+        while(current.next != null){
+            current = current.next;
+        }
+        Node tail = current;
+        current = tail;
         while(current != null){
             System.out.print(current.val + " -> ");
             current = current.prev;
